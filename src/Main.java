@@ -1,4 +1,4 @@
-import javax.print.PrintService;
+//import javax.print.PrintService;
 
 public class Main {
     public static void main(String[] args) {
@@ -10,24 +10,32 @@ public class Main {
                 new Person("Джон", 12, 101),
                 new Person("Иван", 25, 102),
                 new Person("Том", 35, 103),
+                new Person("Джо", 18, 104)
         };
-        System.out.println("people.length = " + people.length);
-        for (int i = 0; i < people.length; i++) {
-            Person person = people[i];
-            System.out.println("Имя: " + person.getName() + " возраст: " + person.getAge() + " номер телефона: "+ person.getPhoneNumber());
-        }
+//        System.out.println("people.length = " + people.length);
+//        for (int i = 0; i < people.length; i++) {
+//            Person person = people[i];
+//            System.out.println("Имя: " + person.getName() + " возраст: " + person.getAge() + " номер телефона: "+ person.getPhoneNumber());
+//        }
         Customer[] customers = {
                 new Customer("Сара", 30, 100, 2345),
                 new Customer("Джон", 12, 101, 1198),
                 new Customer("Том", 35, 103, 8934),
         };
-        System.out.println("customers.length = " + customers.length);
-        for (int i = 0; i < customers.length; i++) {
-            Customer customer = customers[i];
-            System.out.println("Имя: " + customer.getName() + " возраст: " + customer.getAge() + " номер телефона: "+ customer.getPhoneNumber());
-        }
+//        System.out.println("customers.length = " + customers.length);
+//        for (int i = 0; i < customers.length; i++) {
+//            Customer customer = customers[i];
+//            System.out.println("Имя: " + customer.getName() + " возраст: " + customer.getAge() + " номер телефона: "+ customer.getPhoneNumber());
+//        }
+        Gamers[] gamers = {
+                new Gamers("Сара", 30, 100, "PC"),
+                new Gamers("Джон", 12, 101, "PS"),
+                new Gamers("Джо", 35, 104, "PS"),
+        };
+
         PrintService printService = new PrintService();
         printService.print(people);
         printService.print(customers);
+        printService.print(gamers);
     }
 }
